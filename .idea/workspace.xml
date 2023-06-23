@@ -8,9 +8,9 @@
       <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c1/TestFileCopy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c2/client/Client.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c2/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c1/TestFilesWalkFileTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c1/TestFilesWalkFileTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687394816986</updated>
       <workItem from="1687394818192" duration="5700000" />
-      <workItem from="1687481385385" duration="13493000" />
+      <workItem from="1687481385385" duration="15184000" />
     </task>
     <servers />
   </component>
@@ -187,6 +187,11 @@
           <url>file://$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/c2/client/Client.java</url>
           <line>11</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
