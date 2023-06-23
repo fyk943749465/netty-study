@@ -5,6 +5,9 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 递归 遍历
+ */
 public class TestFilesWalkFileTree {
 
     public static void main(String[] args) throws IOException {
@@ -29,5 +32,29 @@ public class TestFilesWalkFileTree {
 
         System.out.println("dir count:" + dirCount);
         System.out.println("file count:" + fileCount);
+    }
+
+    /**
+     * 递归删除文件和文件夹，但是用程序做删除操作，非常危险，谨慎操作
+     * @param path
+     * @throws IOException
+     */
+    public void deleteFileDir(String path) throws IOException {
+        Files.walkFileTree(Paths.get(path), new SimpleFileVisitor<Path>(){
+
+            // 访问文件
+            @Override
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                Files.delete(file);
+                return super.visitFile(file, attrs);
+            }
+
+            // 退出目录后
+            @Override
+            public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                Files.delete(dir);
+                return super.postVisitDirectory(dir, exc);
+            }
+        });
     }
 }
