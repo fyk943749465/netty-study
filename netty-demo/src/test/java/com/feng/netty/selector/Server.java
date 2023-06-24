@@ -13,6 +13,22 @@ import static com.feng.netty.c1.utils.ByteBufferUtil.debugAll;
 @Slf4j
 public class Server {
 
+    private static void split(ByteBuffer source) {
+
+        source.flip();
+        for (int i = 0; i < source.limit(); ++i) {
+
+            if (source.get(i) == '\n') { // 表示读到一条完整消息的末尾了
+                int length = i + 1 - source.position();  // 得到消息的长度
+                ByteBuffer target = ByteBuffer.allocate(length);
+                for (int j = 0; j < length; ++j) {
+                    target.put(source.get());  // 完整的消息存入buffer中
+                }
+                debugAll(target);
+            }
+        }
+        source.compact(); // 回到起始位置，留下未读的内容
+    }
     public static void main(String[] args) throws IOException {
 
         // 1. 创建 selector 管理多个 channel
@@ -38,16 +54,28 @@ public class Server {
                     SocketChannel sc = channel.accept();  // 客户端的channel
                     sc.configureBlocking(false);
                     log.debug("{}", sc);
-                    SelectionKey scKey = sc.register(selector, 0, null); // 将 sc 与 selector 关联
+                    ByteBuffer buffer = ByteBuffer.allocate(16);
+                    // 将 sc 与 selector 关联，并且当前的sc 关联一个特定的 buffer 缓冲区，每个与服务端建立的socket 都有自己的一个 buffer 缓冲区
+                    SelectionKey scKey = sc.register(selector, 0, buffer);
                     scKey.interestOps(SelectionKey.OP_READ); // 在 sc 上注册刚兴趣的事件
                 } else if (key.isReadable()) {
                     // 捕获异常
                     try {
                         SocketChannel socketChannel = (SocketChannel) key.channel();
-                        ByteBuffer buffer = ByteBuffer.allocate(16);
-                        socketChannel.read(buffer);
-                        buffer.flip();
-                        debugAll(buffer);
+                        ByteBuffer buffer = (ByteBuffer) key.attachment();
+                        int read = socketChannel.read(buffer);
+                        if (read == -1) {
+                            // 正常断开，这个事件也需要处理
+                            key.cancel();
+                        } else {
+                            split(buffer);
+                            if (buffer.position() == buffer.limit()) { // 表示buffer缓冲区不够，一条完整消息在split 中没有读完
+                                ByteBuffer newBuffer = ByteBuffer.allocate(buffer.capacity() * 2);//对原来的buffer进行扩容
+                                buffer.flip(); // 切换到读模式
+                                newBuffer.put(buffer);  // 将内容复制到新的扩容后的 buffer 中
+                                key.attach(newBuffer); // selectorKey 上关联新的 buffer
+                            }
+                        }
                     } catch (IOException e) {
                        e.printStackTrace();
                        key.cancel(); // 发生异常，将感兴趣的事件取消掉（也是一种处理方式），事件必须处理
