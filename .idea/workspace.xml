@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e801de-d777-4980-8ddf-ed40b8230479" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterServer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,7 @@
       <updated>1687394816986</updated>
       <workItem from="1687394818192" duration="5700000" />
       <workItem from="1687481385385" duration="15808000" />
-      <workItem from="1687591475012" duration="3947000" />
+      <workItem from="1687591475012" duration="4794000" />
     </task>
     <servers />
   </component>
