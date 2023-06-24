@@ -1,4 +1,4 @@
-package com.feng.netty.c2.client;
+package com.feng.nio.c2.client;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

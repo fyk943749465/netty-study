@@ -1,4 +1,4 @@
-package com.feng.netty.c1;
+package com.feng.nio.c1;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

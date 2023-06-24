@@ -1,4 +1,4 @@
-package com.feng.netty.multi.thread;
+package com.feng.nio.thread;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
