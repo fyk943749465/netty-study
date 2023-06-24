@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e801de-d777-4980-8ddf-ed40b8230479" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/WriterServer2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/selector/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <recent name="com.feng.netty.c1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.WriterClient">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.feng.netty.c2.client.Client" />
       <module name="netty-demo" />
@@ -81,12 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.c2.server.Server" />
+    <configuration name="WriterClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.selector.WriterClient" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.c2.server.*" />
+          <option name="PATTERN" value="com.feng.netty.selector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFileCopy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.c1.TestFileCopy" />
+    <configuration name="WriterServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.selector.WriterServer" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.c1.*" />
+          <option name="PATTERN" value="com.feng.netty.selector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFilesWalkFileTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.c1.TestFilesWalkFileTree" />
+    <configuration name="WriterServer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.selector.WriterServer2" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.c1.*" />
+          <option name="PATTERN" value="com.feng.netty.selector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,19 +136,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.WriterClient" />
+      <item itemvalue="Application.WriterServer" />
+      <item itemvalue="Application.WriterServer2" />
       <item itemvalue="Application.com.feng.netty.selector.Server" />
       <item itemvalue="Application.Client" />
-      <item itemvalue="Application.Server" />
-      <item itemvalue="Application.TestFileCopy" />
-      <item itemvalue="Application.TestFilesWalkFileTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WriterClient" />
+        <item itemvalue="Application.WriterServer2" />
+        <item itemvalue="Application.WriterServer" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.com.feng.netty.selector.Server" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.TestFileCopy" />
-        <item itemvalue="Application.TestFilesWalkFileTree" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +162,7 @@
       <updated>1687394816986</updated>
       <workItem from="1687394818192" duration="5700000" />
       <workItem from="1687481385385" duration="15808000" />
-      <workItem from="1687591475012" duration="1179000" />
+      <workItem from="1687591475012" duration="3947000" />
     </task>
     <servers />
   </component>
