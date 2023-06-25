@@ -83,7 +83,6 @@ public class TestPipeline {
                                 super.write(ctx, msg, promise);
                             }
                         });
-
                     }
                 }).bind(8080);
     }
