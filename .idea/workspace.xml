@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e801de-d777-4980-8ddf-ed40b8230479" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/redis/TestRedis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/test/java/com/feng/netty/http/TestHttp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +67,7 @@
       <recent name="com.feng.netty.c1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestRedis">
+  <component name="RunManager" selected="Application.TestHttp (2)">
     <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.feng.netty.pack.Client" />
       <module name="netty-demo" />
@@ -120,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LineBasedClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.pack.LineBasedClient" />
+    <configuration name="TestHttp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.http.TestHttp" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.pack.*" />
+          <option name="PATTERN" value="com.feng.netty.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LineBasedServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.pack.LineBasedServer" />
+    <configuration name="TestHttp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.http.TestHttp" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.pack.*" />
+          <option name="PATTERN" value="com.feng.netty.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LineBasedServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.netty.pack.LineBasedServer" />
+    <configuration name="TestHttp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.netty.http.TestHttp" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.feng.netty.pack.*" />
+          <option name="PATTERN" value="com.feng.netty.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,19 +186,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LineBasedClient (1)" />
-      <item itemvalue="Application.LineBasedServer" />
-      <item itemvalue="Application.LineBasedServer (2)" />
+      <item itemvalue="Application.TestHttp" />
+      <item itemvalue="Application.TestHttp (1)" />
+      <item itemvalue="Application.TestHttp (2)" />
       <item itemvalue="Application.TestLengthFiledDecoder" />
       <item itemvalue="Application.TestRedis" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestHttp (2)" />
+        <item itemvalue="Application.TestHttp" />
+        <item itemvalue="Application.TestHttp (1)" />
         <item itemvalue="Application.TestRedis" />
         <item itemvalue="Application.TestLengthFiledDecoder" />
-        <item itemvalue="Application.LineBasedClient (1)" />
-        <item itemvalue="Application.LineBasedServer (2)" />
-        <item itemvalue="Application.LineBasedServer" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +214,7 @@
       <workItem from="1687481385385" duration="15808000" />
       <workItem from="1687591475012" duration="12950000" />
       <workItem from="1687656588789" duration="17685000" />
-      <workItem from="1687742724353" duration="9201000" />
+      <workItem from="1687742724353" duration="11753000" />
     </task>
     <servers />
   </component>
