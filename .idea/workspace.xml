@@ -5,52 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e801de-d777-4980-8ddf-ed40b8230479" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/client/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/AbstractResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/ChatRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/ChatResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupChatRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupChatResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupCreateRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupCreateResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupJoinRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupJoinResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupMembersRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupMembersResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupQuitRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/GroupQuitResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/LoginRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/LoginResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/PingMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/PongMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/RpcRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/RpcResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/MessageCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/MessageCodecSharable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/ProtocolFrameDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/TestEmbeddedCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/ChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/ChatRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/GroupChatRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/GroupCreateRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/GroupJoinRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/GroupMembersRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/GroupQuitRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/LoginRequestMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/handler/QuitHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/serivce/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/serivce/UserServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/serivce/UserServiceMemoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/GroupSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/GroupSessionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/GroupSessionMemoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/SessionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/session/SessionMemoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/ChatServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +189,7 @@
       <workItem from="1687591475012" duration="12950000" />
       <workItem from="1687656588789" duration="17685000" />
       <workItem from="1687742724353" duration="22974000" />
-      <workItem from="1687826119995" duration="8242000" />
+      <workItem from="1687826119995" duration="9687000" />
     </task>
     <servers />
   </component>

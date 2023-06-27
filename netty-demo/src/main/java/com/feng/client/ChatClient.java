@@ -4,15 +4,15 @@ import com.feng.message.*;
 import com.feng.protocol.MessageCodecSharable;
 import com.feng.protocol.ProtocolFrameDecoder;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.ChannelInitializer;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleState;
+import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.handler.timeout.IdleStateHandler;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -44,6 +44,19 @@ public class ChatClient {
                     ch.pipeline().addLast(new ProtocolFrameDecoder());
                     ch.pipeline().addLast(loggingHandler); // 这个handler 多个 channel 可以共享，提出来
                     ch.pipeline().addLast(messageCodec);
+                    // 3 秒没有向服务写数据，会触发一个 IdleState#WRITER_IDLE 事件
+                    ch.pipeline().addLast(new IdleStateHandler(0, 3, 0));
+                    ch.pipeline().addLast(new ChannelDuplexHandler(){
+                        @Override  // 特殊事件
+                        public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+                            IdleStateEvent event = (IdleStateEvent) evt;
+                            // 触发了写空闲事件
+                            if (event.state() == IdleState.WRITER_IDLE) {
+//                                log.debug("3s 没有写数据了，发送一个心跳包");
+                                ctx.writeAndFlush(new PingMessage());
+                            }
+                        }
+                    });
                     ch.pipeline().addLast(new ChannelInboundHandlerAdapter(){
 
                         // 得到消息时，触发该事件

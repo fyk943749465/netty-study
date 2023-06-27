@@ -36,3 +36,6 @@
 问题
 - 假死的连接占用的资源不能自动释放
 - 向假死的连接发送数据，得到的反馈时发送超时
+
+IdleStateHandler 用来判断连接是否空闲的 handler
+ChannelDuplexHandler 这是能处理出站和入站的 handler, 配合 IdleStateHandler 可以向网络发送心跳包
