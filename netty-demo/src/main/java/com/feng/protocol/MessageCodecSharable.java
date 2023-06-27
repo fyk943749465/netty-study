@@ -1,5 +1,6 @@
 package com.feng.protocol;
 
+import com.feng.config.Config;
 import com.feng.message.Message;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
@@ -28,18 +29,20 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
         //2. 1 字节的版本号
         out.writeByte(1);
         //3. 1 字节的序列化方式 jdk 0, json 1
-        out.writeByte(0);
+        out.writeByte(Config.getSerializerAlgorithm().ordinal());
         //4. 1 字节的指令类型(消息类型）
         out.writeByte(msg.getMessageType());
         //5. 4 字节 请求序号
         out.writeInt(msg.getSequenceId());
         // 写一个无意义的字节，保持长度是 2^n
         out.writeByte(0xff);
-        //6. 获取内容的字节数组（java 对象转字节数组）因为，前面的序列化方式选择了0
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(msg);
-        byte[] bytes = bos.toByteArray();
+//        //6. 获取内容的字节数组（java 对象转字节数组）因为，前面的序列化方式选择了0
+//        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+//        ObjectOutputStream oos = new ObjectOutputStream(bos);
+//        oos.writeObject(msg);
+//        byte[] bytes = bos.toByteArray();
+
+        byte[] bytes = Config.getSerializerAlgorithm().serialize(msg);
 
         //7. 4 字节 消息长度
         out.writeInt(bytes.length);
@@ -70,11 +73,15 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
         in.readBytes(bytes, 0, length);
 
         // jdk 的序列化
-        if (serializerType == 0) {
-            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bytes));
-            Message message = (Message)ois.readObject();
-            log.debug("{}", message);
-            out.add(message);
-        }
+//        if (serializerType == 0) {
+//            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bytes));
+//            Message message = (Message)ois.readObject();
+//            log.debug("{}", message);
+//            out.add(message);
+//        }
+        Serializer.Algorithm algorithm = Serializer.Algorithm.values()[serializerType];
+        Class<? extends Message> messageClass = Message.getMessageClass(messageType);
+        Message message = algorithm.deserialize(messageClass, bytes);
+        out.add(message);
     }
 }

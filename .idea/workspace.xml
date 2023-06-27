@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e801de-d777-4980-8ddf-ed40b8230479" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/TestSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-demo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/MessageCodecSharable.java" beforeDir="false" afterPath="$PROJECT_DIR$/netty-demo/src/main/java/com/feng/protocol/MessageCodecSharable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_directory_selection": "D:/project/netty-study/netty-demo/src/main/java/com/feng/server",
-    "last_opened_file_path": "D:/project/netty-study/netty-demo/src/main/java/com/feng/server/handler",
+    "last_opened_file_path": "D:/project/netty-study/netty-demo/src/main/java/com/feng/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,10 +68,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\config" />
+      <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\protocol" />
       <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\server\handler" />
       <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\server\serivce" />
       <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\server\session" />
-      <recent name="D:\project\netty-study\netty-demo\src\main\java\com\feng\message" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\netty-study\netty-demo" />
@@ -80,7 +85,7 @@
       <recent name="com.feng.server.handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChatClient (2)">
+  <component name="RunManager" selected="Application.TestSerializer">
     <configuration name="ChatClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.feng.client.ChatClient" />
       <module name="netty-demo" />
@@ -120,19 +125,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.feng.server.ChatServer" />
-      <module name="netty-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.feng.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.feng.server.ChatServer" />
       <module name="netty-demo" />
@@ -159,20 +151,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSerializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feng.protocol.TestSerializer" />
+      <module name="netty-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feng.protocol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ChatClient (1)" />
       <item itemvalue="Application.ChatClient (2)" />
+      <item itemvalue="Application.TestSerializer" />
       <item itemvalue="Application.ChatClient" />
       <item itemvalue="Application.ChatServer" />
-      <item itemvalue="Application.ChatServer (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestSerializer" />
         <item itemvalue="Application.ChatClient (2)" />
         <item itemvalue="Application.ChatClient (1)" />
         <item itemvalue="Application.ChatServer" />
         <item itemvalue="Application.ChatClient" />
-        <item itemvalue="Application.ChatServer (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +194,7 @@
       <workItem from="1687591475012" duration="12950000" />
       <workItem from="1687656588789" duration="17685000" />
       <workItem from="1687742724353" duration="22974000" />
-      <workItem from="1687826119995" duration="9687000" />
+      <workItem from="1687826119995" duration="12296000" />
     </task>
     <servers />
   </component>
